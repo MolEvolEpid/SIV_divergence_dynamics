@@ -1,9 +1,6 @@
 library(ape)
 library(ips)
 
-#setwd("C:\\Users\\361998\\Documents\\Narmada_projects\\SIV_divergence_post_ART\\pre_and_post_ART\\code_R")
-setwd("C:\\Users\\nsambaturu\\OneDrive\\Documents\\Research\\HIV\\SIV_divergence_decline_2024_25\\code_R")
-
 # Get names of all SIV DNA fasta files
 siv.dna.data <- list.files(path = "..\\data\\fasta_files_aligned", pattern = "_combined_aligned_consref_RNA0_DNArest.fasta", full.names = TRUE)[1:9]
 
