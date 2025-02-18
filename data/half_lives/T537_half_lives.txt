@@ -1,0 +1,4 @@
+slow(weeks)	36
+fast(days)	3.32
+slow_ind(weeks)	53
+fast_up95_ind(days)	0.9

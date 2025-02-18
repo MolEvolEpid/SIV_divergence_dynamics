@@ -2,7 +2,7 @@ library(ape)
 library(ips)
 
 # Get names of all SIV DNA fasta files
-siv.dna.data <- list.files(path = "..\\data\\fasta_files_aligned", pattern = "_combined_aligned_consref_DNA0_DNArest.fasta", full.names = TRUE)[1:10]
+siv.dna.data <- list.files(path = "data\\fasta_files_aligned", pattern = "_combined_aligned_consref_DNA0_DNArest.fasta", full.names = TRUE)[1:10]
 
 
 # Get histograms for number of substitutions per site
@@ -47,18 +47,18 @@ for(n in 1:10){slow.hist[[n]] <- hist2[[n]]$counts * (sum(hist1[[n]]$counts) / s
 # Redo the plots
 layout(matrix(1:10, ncol = 5))
 for(n in 1:10){
-  plot(hist1[[1]]$mids, fast.hist[[n]], lwd = 2, xlab = "subst/site", ylab = "count", main = paste(monkey_IDs[n], "TypeA fast", sep = " "), type = "h")
-  plot(hist1[[1]]$mids, slow.hist[[n]], lwd = 2, xlab = "subst/site", ylab = "count", main = paste(monkey_IDs[n], "TypeA slow", sep = " "), type = "h")
+  plot(hist1[[1]]$mids, fast.hist[[n]], lwd = 2, xlab = "subst/site", ylab = "count", main = paste(monkey_IDs[n], "DNA0 fast", sep = " "), type = "h")
+  plot(hist1[[1]]$mids, slow.hist[[n]], lwd = 2, xlab = "subst/site", ylab = "count", main = paste(monkey_IDs[n], "DNA0 slow", sep = " "), type = "h")
 }
 
 # Write histogram to file
 index <- 1
 for(n in 1:10){
    results <- cbind(hist1[[n]]$mids, fast.hist[[n]])
-   write.table(results, paste("..\\results\\", monkey_IDs[index], "\\", monkey_IDs[index], "_DNA0_DNArest_fast_hist_3years.txt", sep = ""), append=FALSE)
+   write.table(results, paste("results\\", monkey_IDs[index], "\\", monkey_IDs[index], "_DNA0_DNArest_fast_hist_3years.txt", sep = ""), append=FALSE)
 
    results <- cbind(hist1[[n]]$mids, slow.hist[[n]])
-   write.table(results, paste("..\\results\\", monkey_IDs[index], "\\", monkey_IDs[index], "_DNA0_DNArest_slow_hist_3years.txt", sep = ""), append=FALSE)
+   write.table(results, paste("results\\", monkey_IDs[index], "\\", monkey_IDs[index], "_DNA0_DNArest_slow_hist_3years.txt", sep = ""), append=FALSE)
 
    index <- index + 1
 }
