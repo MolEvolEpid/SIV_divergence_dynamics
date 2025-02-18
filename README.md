@@ -18,10 +18,13 @@ The human immunodeficiency virus (HIV) can persist in a latent form as integrate
 
 
 **Usage notes**
+
 The data folder contains (i) the aligned fasta files for the SIV-infected macaques, with the consenses sequence of the infecting stock as the reference, (ii) the half-lives of the short- and long-lived CD4+ T cells estimated using IPDA data for the number of intact proviruses over time (IPDA data published in Fray et. al. [1]), (iii) the sampling times and number of sampled sequences, and (iv) the mutational bins to be used for histograms.
+
 
 The R code uses these data to estimate the distribution of mutations in the short- and long-lived CD4+ T cells at the start of ART. The Python code in the Jupyter notebooks then uses these estimated histograms and half-lives to simulate the dynamics of divergence over time.
 
 
 **Contact**
+
 The lead contact and corresponding author is Thomas Leitner (tkl@lanl.gov). Any additional information required to reanalyze the data reported here is available from the lead contact upon request.
