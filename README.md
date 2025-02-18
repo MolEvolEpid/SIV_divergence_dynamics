@@ -25,3 +25,8 @@ The R code uses these data to estimate the distribution of mutations in the shor
 
 **Contact**
 The lead contact and corresponding author is Thomas Leitner (tkl@lanl.gov). Any additional information required to reanalyze the data reported here is available from the lead contact upon request.
+
+
+**DOI**
+
+https://doi.org/10.5281/zenodo.14889585
